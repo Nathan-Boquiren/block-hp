@@ -1,5 +1,8 @@
 let cl = console.log;
 
+cl(
+  "This website was created by Nathan Boquiren. For your own personal website, or an online resume/cv, contact me at nathanjboquiren@gmail."
+);
 // ========== DOM Elements ==========
 
 let hamburger = document.getElementById("hamburger");

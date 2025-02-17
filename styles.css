@@ -327,6 +327,10 @@ h2 {
         filter: saturate(1);
     }
 
+    .img-wrapper img:hover {
+        all: unset;
+    }
+
     .img-wrapper h3 {
         top: unset;
         left: unset;
@@ -337,6 +341,26 @@ h2 {
     .img-wrapper h3::after {
         display: none;
     }
+}
+
+/* === Gallery Animations === */
+.product-imgs-container div .img-wrapper {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s ease;
+}
+
+.product-imgs-container div .img-wrapper:nth-child(odd) {
+    transform-origin: 0% 100%;
+}
+
+.product-imgs-container div .img-wrapper:nth-child(even) {
+    transform-origin: 100% 100%;
+}
+
+.product-imgs-container div .img-wrapper.animate {
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* ========== Contact Section ========== */
@@ -522,9 +546,8 @@ h2 {
 /* ========== Disclaimer Section ========== */
 
 .disclaimer {
-    margin: 0 auto;
+    margin: 0 auto 5rem;
     padding: 1rem;
-    margin-bottom: 5rem;
     background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
@@ -532,6 +555,7 @@ h2 {
     p {
         font-weight: 600;
         color: red;
+        max-width: 800px;
     }
 }
 

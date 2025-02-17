@@ -32,4 +32,18 @@ links.forEach((link) => {
   });
 });
 
-// ========== Gallery Scroll Snap Thing ==========
+// ========== Gallery Scroll Animations ==========
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add("animate");
+      }, 100);
+    }
+  });
+});
+
+const galleryImgs = document.querySelectorAll(".img-wrapper");
+
+galleryImgs.forEach((img) => observer.observe(img));

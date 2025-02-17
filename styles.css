@@ -22,6 +22,11 @@
     transition: all 0.2s ease;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 2rem;
+}
+
 body {
     min-height: 100vh;
     background-color: var(--light-color);
@@ -132,6 +137,7 @@ nav ul li a {
         width: 45%;
         padding: 1rem;
         padding-top: 8rem;
+        z-index: 100;
     }
 
     nav ul {
@@ -337,7 +343,7 @@ h2 {
 
 #contact-section {
     min-height: 80vh;
-    margin: 5rem auto 1rem;
+    margin: 5rem auto 0;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -362,7 +368,6 @@ h2 {
     background-color: white;
     border-radius: inherit;
     z-index: 0;
-
 }
 
 .contact-img img {
@@ -409,7 +414,6 @@ h2 {
 }
 
 .contact-wrapper:hover {
-
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     background-color: white;
@@ -423,8 +427,6 @@ h2 {
     color: white;
     font-size: clamp(1rem, 3vw, 2rem);
 }
-
-
 
 .contact-icon {
     font-family: 'Material Symbols Rounded';
@@ -510,12 +512,22 @@ h2 {
 
 }
 
+@media (max-width: 425px) {
+    .contact-img p {
+        top: 30%;
+        left: 10%;
+    }
+}
+
 /* ========== Disclaimer Section ========== */
 
 .disclaimer {
-    width: clamp(300px, 80%, 1000px);
     margin: 0 auto;
+    padding: 1rem;
     margin-bottom: 5rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
 
     p {
         font-weight: 600;

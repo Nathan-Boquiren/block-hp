@@ -4,6 +4,7 @@ let cl = console.log;
 
 let hamburger = document.getElementById("hamburger");
 let navMenu = document.getElementById("nav-menu");
+let links = document.querySelectorAll(".link");
 
 // ========== Hamburger Menu ==========
 
@@ -22,6 +23,13 @@ document.addEventListener("click", (e) => {
     navMenu.classList.remove("open");
     hamburger.classList.remove("hamburger-open");
   }
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+    hamburger.classList.remove("hamburger-open");
+  });
 });
 
 // ========== Gallery Scroll Snap Thing ==========
